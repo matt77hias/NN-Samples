@@ -1,6 +1,11 @@
 import numpy as np
 from classifier_utils import calculate_accuracy, calculate_data_loss, calculate_regularization_loss, calculate_loss
 
+# Data preprocessing: none
+# Weight initialization: small random numbers drawn from a multi-dimensional gaussian
+# Bias initialization: 0
+# Regularization: L2
+
 def train(X, y, nb_iterations=10000, step_size=1e-0, rng=None, seed=None):
     if rng is None:
         rng = np.random
