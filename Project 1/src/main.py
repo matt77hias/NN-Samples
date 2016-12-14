@@ -50,9 +50,9 @@ def plot_f(f, rx=(-2.0,2.0), ry=(-2.0,2.0), res=(512,512), title=''):
             x = rx[0] + px * dx
             c = np.argmax(f(np.array([x,y])))
             if c == 0: 
-                I[py,px,:] = np.array([0,255,255])
+                I[res[1]-py-1,px,:] = np.array([0,0,255])
             elif c == 1:
-                I[py,px,:] = np.array([0,0,255])
+                I[res[1]-py-1,px,:] = np.array([0,255,255])
             else:
-                I[py,px,:] = np.array([255,0,0])
+                I[res[1]-py-1,px,:] = np.array([255,0,0])
     imshow(title, I)
